@@ -1,0 +1,24 @@
+                  ;sampletest1.asm
+00000000 0000A500 ldc     0xa5    		;checking for lower case hex
+00000001 0000A500 ldc     0xA5 			;checking for upper case hex
+00000002 FFFFFB01 adc     -5 				;negative value in adc
+00000003 00000000 ldc   +0 				;+0 is acceptable
+00000004 00000000 ldc  -0 				;-0 is acceptable
+00000005 FFFFC70A adj    -071 			;-071 is treated as Octal
+00000006 0000120A adj +022   				;+022 is treated as Octal
+                  
+00000007          Start:     
+00000007 FFFFF000     ldc -0x10    		;negative hex value
+00000008 0000000B     a2sp          		;a2sp instruction
+00000009 00000006 loop:       add   		;only ad instruction
+0000000A 0000002D loop1: SET  45 			;set loop1 to the value of 45
+                  
+0000000B 00002D00 ldc loop1 				;ldc value of loop1
+                  
+0000000C          loop2:  				;set loop2 to the value of -10
+0000000C FFFFFFF6 SET -10
+0000000D FFFFE80D call loop2 				;calling loop2
+                  
+0000000E C4653600 var1: data -1000000000 	;setting var1 equal to -1000000000
+                  
+0000000F FFFFF70D call Start 				;calling start

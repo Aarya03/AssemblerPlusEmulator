@@ -1,0 +1,147 @@
+/*****************************************************************************
+TITLE: Claims																																
+AUTHOR: AARYA VARAT JOSHI - 1801CS01
+Declaration of Authorship
+This txt file, claims.txt, is part of the assignment of CS321 at the 
+department of Computer Science and Engg, IIT Patna . 
+*****************************************************************************/
+
+Files:
+==========
+*All the files I submitted, asm.cpp, emu.cpp and claims.txt, have my name and student id at the start, along with a declaration of authorship.
+
+*The evidence for Assembler including the output files from the seven  test examples has also been uploaded. They are test1(3 output files), test2(2 output files), test3(3 output file), test4(3 output files), MyBubbleSort(3 output files), sampletest1(3 output files) and sampletest2(2 output files). All the test files have been tested and work properly.
+
+*Both of my c++ programs did not show any errors and warnings when I compiled it with g++ asm.cpp -o asm and g++ emu.cpp -o emu.
+
+*Two programs are compilable with g++ asm.cpp -o asm and g++ emu.cpp -o emu.
+
+
+=============================
+Program format and structure:
+=============================
+1. The assembler:
+
+    * with two data structures to store respectively labels and mnemonic table with expected operands.
+    * uses a single routine for both passes.
+    * detects label erros.
+    * consistent and sensible formatting with sensible program structure. 
+    * sensible variable, function & type names with explanatory comments.
+		* advanced listing file.
+		* assembles test programs.
+	  * can implements and demonstrates the instruction SET.
+
+2. The emulator:
+
+	* with three data structures to store respectively memory, mnemonic table with expected operands
+	  and a linked list structure word.
+    * loads object file, 
+    * by giving the instructions like "-befor/-after" , the program can produce memory dump before/after execution.
+    * by giving the instruction like "-trace", the program prints the result of program executed.
+    * detects errant programs.
+
+=============================
+Testing:
+=============================
+ 
+1. The assembler:
+
+I have tested  seven examples shown as below. The errors only occurred in the files test2.asm and sampletest2.asm and 
+the programs immediately stopped on the second pass and .o file was not created. 
+
+The others were tested without any errors detected and produced three output files, listing file, 
+error log file and machine readable object file, for each example.
+
+
+1)
+#Input: asm test1.asm
+#Output: 
+a. test1.lst
+b. test1.log (without any error messages)
+c. test1.o
+
+2)
+#Input:asm test2.asm
+#Output: 
+a. test2.lst
+b. test2.log
+
+error messages:
+ERROR: duplicate label definition on line number 4
+ERROR: improper operand on line number 7
+ERROR: improper operand on line number 8
+ERROR: extra on end of line on line number 9
+ERROR: bogus label name on line number 10
+ERROR: bogus mnemonic on line number 11
+ERROR: bogus mnemonic on line number 12
+ERROR: bogus label name on line number 5
+ERROR: bogus label name on line number 6
+
+3)
+#Input:asm test3.asm
+#Output: 
+a. test3.lst
+b. test3.log (without any error messages)
+c. test3.o
+
+4)
+#Input:asm test4.asm
+#Output: 
+a. test4.lst
+b. test4.log (without any error messages)
+c. test4.o
+
+5)
+#Input:asm MyBubbleSort.asm
+#Output: 
+a. MyBubbleSort.lst
+b. MyBubbleSort.log (without any error messages)
+c. MyBubbleSort.o
+
+6)
+#Input:asm sampletest1.asm
+#Output: 
+a. sampletest1.lst
+b. sampletest1.log (without any error messages)
+c. sampletest1.o
+
+7)
+#Input:asm sampletest2.asm
+#Output: 
+a. sampletest2.lst
+b. sampletest2.log (with error messages)
+
+error messages:
+ERROR: extra on end of line on line number 3
+ERROR: extra on end of line on line number 4
+ERROR: bogus mnemonic on line number 5
+ERROR: extra on end of line on line number 6
+ERROR: improper operand on line number 10
+ERROR: bogus mnemonic on line number 11
+ERROR: bogus mnemonic on line number 12
+ERROR: bogus label name on line number 8
+ERROR: bogus label name on line number 9
+ERROR: bogus label name on line number 2
+ERROR: bogus label name on line number 7
+
+2. The emulator:
+
+I have tested three examples shown as bellow.
+The first one was infinite loop and the output for that was segmentation fault.
+The other two were without any errors.
+After running the bin file given, the trace data are the same as 
+the implemented result from my own program.
+The trace data is provided with the zip file
+
+1)
+#Input:emu -trace test1.o
+#Output:
+Segmentation fault (core dumped)
+
+2)
+#Input:emu -trace test4.o
+#Output: test4.txt
+
+3)
+#Input: emu -trace MyBubbleSort.o
+#Output: MyBubbleSort.txt

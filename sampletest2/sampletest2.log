@@ -1,0 +1,11 @@
+ERROR: extra on end of line on line number 3
+ERROR: extra on end of line on line number 4
+ERROR: bogus mnemonic on line number 5
+ERROR: extra on end of line on line number 6
+ERROR: improper operand on line number 10
+ERROR: bogus mnemonic on line number 11
+ERROR: bogus mnemonic on line number 12
+ERROR: bogus label name on line number 8
+ERROR: bogus label name on line number 9
+ERROR: bogus label name on line number 2
+ERROR: bogus label name on line number 7

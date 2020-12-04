@@ -1,0 +1,6 @@
+                  ; test3.asm
+                  ; Test SET
+00000000 0000004B val: SET 75
+00000001 00004B00 ldc     val
+00000002 00004201 adc     val2
+00000003 00000042 val2: SET 66
