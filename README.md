@@ -169,7 +169,7 @@ Two pass assembler and Emulator for an extended SIMPLE instruction set</br>
 </br>
 <b>EXPLANATION OF C++ Code:</b></br>
 ● The data structures like maps, vectors and arrays are declared to store values such as instructions, operands, opcodes, etc.</br>
-● Declared functions like removeUneccesarySpaces, removeComment, opcode_to_hex_string, etc. for carrying out various functions.
+● Declared functions like removeUneccesarySpaces, removeComment, opcode_to_hex_string, etc. for carrying out various functions.</br>
 ● In main first the init() function is called to initialize instruct_table and error_table.
 Then the extension of the file is checked. If the extension is not ‘.asm’ then error is printed on the screen. Then Pass1() and Pass2() are called.</br>
 ● The SET instruction is implemented.</br>
